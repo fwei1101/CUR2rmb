@@ -2,16 +2,17 @@
   <head></head>
   <body>
     <script>
-      var fm = "NOK";
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const currency = urlParams.get('currency');
+      const amount = urlParams.get('amount');
+      var fm = currency;
       var to = "CNY";
       var tz = "timezone";
       var sz = "300x127";
       var lg = "en";
       var st = "info";
       var cd = 0;
-      const queryString = window.location.search;
-      const urlParams = new URLSearchParams(queryString);
-      const amount = urlParams.get('amount');
       var am = amount
     </script>
     <script src="//currencyrate.today/exchangerates"></script>
